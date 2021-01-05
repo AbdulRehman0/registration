@@ -59,13 +59,7 @@ if(isset($_GET["id"]) && isset($_GET["func"])){
     header("Location: ../dashboard.php");die;
 }
 if(isset($_POST["update"])){
-    if($_POST["pass"] && $_POST["pass1"]){
-        if($_POST["pass"]==$_POST["pass1"]){
 
-        }else{
-            
-        }
-    }
 }
 
 function userExists($email){
