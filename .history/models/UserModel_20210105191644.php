@@ -15,8 +15,7 @@ Class User{
             "name"=>$data["name"],
             "email"=>$data["email"],
             "role_id"=>$data["role_id"],
-            "password"=>$data["password"],
-            "phone"=>$data["phone"]
+            "password"=>$data["password"]
         );
         return $this->db->insert("users",$insertData);
 

@@ -19,10 +19,8 @@ if (isset($_POST["registartion"])){
         "name"=>$_POST["full-name"],
         "email"=>$_POST["email"],
         "role_id"=>$_POST["designation"],
-        "password"=>$pass,
-        "phone"=>$_POST["phone"]
+        "password"=>$pass
     );
-    print_r($_POST);
     $result=$user->insertUser($data);
     if($result){
         header("Location: ../login.php?error=0&msg=User has been added");die;

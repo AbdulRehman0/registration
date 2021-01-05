@@ -19,10 +19,8 @@ if (isset($_POST["registartion"])){
         "name"=>$_POST["full-name"],
         "email"=>$_POST["email"],
         "role_id"=>$_POST["designation"],
-        "password"=>$pass,
-        "phone"=>$_POST["phone"]
+        "password"=>$pass
     );
-    print_r($_POST);
     $result=$user->insertUser($data);
     if($result){
         header("Location: ../login.php?error=0&msg=User has been added");die;
@@ -52,13 +50,6 @@ if(isset($_POST["login"])){
 
 }
 
-if(isset($_GET["id"]) && isset($_GET["func"])){
-    if(function_exists($_GET["func"])){
-        call_user_func($_GET["func"],$_GET["id"]);
-    }
-    header("Location: ../dashboard.php");
-}
-
 function userExists($email){
     global $user;
     $result = $user->getUserByEmail($email);
@@ -70,7 +61,7 @@ function userExists($email){
 }
 function deleteUser($id){
     global $user;
-    $user->deleteUserByID($id);
+    
 }
 
 ?>

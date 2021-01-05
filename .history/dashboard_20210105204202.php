@@ -26,7 +26,7 @@ include "./templates/header.php";
         <div class="wrapper wrapper--w680">
             <div class="card card-7">
                 <div class="card-body">
-                    <h2 class="title">Users</h2>
+                    <h2 class="title">Dashboard</h2>
                     <table class="table">
                       <thead>
                         <tr>

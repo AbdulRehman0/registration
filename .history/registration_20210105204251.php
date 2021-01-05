@@ -27,14 +27,6 @@ include "./templates/header.php";
                             </div>
                         </div>
                         <div class="row row-space">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <label class="label">Phone</label>
-                                    <input class="input--style-4" type="tel" name="phone" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
@@ -65,7 +57,7 @@ include "./templates/header.php";
                                 </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" name="registartion" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" name="registartion                                  " type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
