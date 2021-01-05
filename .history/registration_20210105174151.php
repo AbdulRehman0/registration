@@ -47,7 +47,7 @@ include "./templates/header.php";
                                     <label class="label">Designation</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select class="input--style-4" name="designation">
-                                            <!-- <option disabled="disabled" selected="selected" required>choose</option> -->
+                                            <option disabled="disabled" selected="selected" required>choose</option>
                                             <option value="1">Admin</option>
                                             <option value="2">Editor</option>
                                         </select>
@@ -57,7 +57,7 @@ include "./templates/header.php";
                                 </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" name="registartion" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" name="submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

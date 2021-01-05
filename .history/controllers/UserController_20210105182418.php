@@ -35,12 +35,11 @@ if(isset($_POST["login"])){
     if($result){
         if(password_verify($postPass, $result[0]["password"])){
             session_start();
-            $_SESSION["session_id"]=true;
+            $_SESSION["session_id"]="true";
             $_SESSION["name"]=$result[0]["name"];
             $_SESSION["email"]=$result[0]["email"];
             $_SESSION["id"]=$result[0]["id"];
             $_SESSION["session_role"]=$result[0]["role_id"];
-            header("Location: ../dashboard.php");
             die;
         }
     }

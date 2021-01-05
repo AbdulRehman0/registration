@@ -7,7 +7,7 @@ include "./templates/header.php";
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Login Form</h2>
-                    <form method="POST" action="./controllers/UserController.php">
+                    <form method="POST" >
                         
                         
                         <div class="row row-space">

@@ -13,7 +13,7 @@ include "./templates/header.php";
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <label class="label">Full Name</label>
-                                    <input class="input--style-4" type="text" name="full-name" required>
+                                    <input class="input--style-4" type="text" name="full-name">
                                 </div>
                             </div>
                         </div>
@@ -22,7 +22,7 @@ include "./templates/header.php";
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email" required>
+                                    <input class="input--style-4" type="email" name="email">
                                 </div>
                             </div>
                         </div>
@@ -30,13 +30,13 @@ include "./templates/header.php";
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="input--style-4" id="exampleInputPassword1" name="pass1" placeholder="Password" required>
+                                    <input type="password" class="input--style-4" id="exampleInputPassword1" name="pass1" placeholder="Password">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword2">Confirm Password</label>
-                                    <input type="password" class="input--style-4" id="exampleInputPassword2" name="pass2" placeholder="Password" required>
+                                    <input type="password" class="input--style-4" id="exampleInputPassword2" name="pass2" placeholder="Password">
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ include "./templates/header.php";
                                     <label class="label">Designation</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select class="input--style-4" name="designation">
-                                            <!-- <option disabled="disabled" selected="selected" required>choose</option> -->
+                                            <option disabled="disabled" selected="selected">choose</option>
                                             <option value="1">Admin</option>
                                             <option value="2">Editor</option>
                                         </select>
@@ -57,7 +57,7 @@ include "./templates/header.php";
                                 </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" name="registartion" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" name="submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

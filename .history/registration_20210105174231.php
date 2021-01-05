@@ -57,7 +57,7 @@ include "./templates/header.php";
                                 </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" name="registartion" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" name="submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

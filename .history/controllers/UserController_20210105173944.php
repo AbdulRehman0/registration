@@ -4,7 +4,7 @@ include "../models/UserModel.php";
 
 $db=connectdb();
 $user = new User($db);
-if (isset($_POST["registartion"])){
+if (isset($_POST["submit"])){
     
     if(userExists($_POST["email"])){
         header("Location: ../registration.php?error=1&msg=user already exists");
@@ -22,38 +22,16 @@ if (isset($_POST["registartion"])){
         "password"=>$pass
     );
     $result=$user->insertUser($data);
-    if($result){
-        header("Location: ../login.php?error=0&msg=User has been added");die;
-    }
-die;
-}
-if(isset($_POST["login"])){
-    $postEmail=$_POST["email"];
-    $postPass=$_POST["pass"];
-    $result= $user->getUserByEmail($postEmail);
     print_r($result);
-    if($result){
-        if(password_verify($postPass, $result[0]["password"])){
-            session_start();
-            $_SESSION["session_id"]=true;
-            $_SESSION["name"]=$result[0]["name"];
-            $_SESSION["email"]=$result[0]["email"];
-            $_SESSION["id"]=$result[0]["id"];
-            $_SESSION["session_role"]=$result[0]["role_id"];
-            header("Location: ../dashboard.php");
-            die;
-        }
-    }
-    echo "password or user name is incorrect";
-    die;
+die;
 
-
+    
+    
 }
 
 function userExists($email){
     global $user;
     $result = $user->getUserByEmail($email);
-    
     if(count($result)==0){
         return false;
     }

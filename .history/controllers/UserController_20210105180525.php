@@ -31,16 +31,10 @@ if(isset($_POST["login"])){
     $postEmail=$_POST["email"];
     $postPass=$_POST["pass"];
     $result= $user->getUserByEmail($postEmail);
-    print_r($result);
+    print_r();
     if($result){
-        if(password_verify($postPass, $result[0]["password"])){
-            session_start();
-            $_SESSION["session_id"]=true;
-            $_SESSION["name"]=$result[0]["name"];
-            $_SESSION["email"]=$result[0]["email"];
-            $_SESSION["id"]=$result[0]["id"];
-            $_SESSION["session_role"]=$result[0]["role_id"];
-            header("Location: ../dashboard.php");
+        if(password_verify($postEmail, $result[0]["password"])){
+            echo "logged in";
             die;
         }
     }
@@ -53,7 +47,7 @@ if(isset($_POST["login"])){
 function userExists($email){
     global $user;
     $result = $user->getUserByEmail($email);
-    
+    print_r($result);
     if(count($result)==0){
         return false;
     }

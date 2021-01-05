@@ -7,7 +7,7 @@ include "./templates/header.php";
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Login Form</h2>
-                    <form method="POST" action="./controllers/UserController.php">
+                    <form method="POST" >
                         
                         
                         <div class="row row-space">
@@ -29,7 +29,7 @@ include "./templates/header.php";
                         
                         
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" name="login" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" name="submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

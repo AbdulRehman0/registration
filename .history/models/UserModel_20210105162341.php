@@ -7,7 +7,6 @@ Class User{
     }
 
     public function getAllUsers(){
-        return $this->db->get("users");
 
     }
     public function insertUser($data){
@@ -17,14 +16,12 @@ Class User{
             "role_id"=>$data["role_id"],
             "password"=>$data["password"]
         );
-        return $this->db->insert("users",$insertData);
+        $this->db->insert("users",$insertData);
 
     }
     public function getUserByID($id){}
     public function getUserByEmail($email){
-        $query = "select * from users where email=?";
-        $params=array($email);
-        return $this->db->rawQuery($query,$params);
+        return $this->db->where('email',$email)->get("users");
     }
     public function deleteUserByID($id){}
     public function updateUserByID($data){}
