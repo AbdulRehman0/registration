@@ -59,19 +59,18 @@ if(isset($_GET["id"]) && isset($_GET["func"])){
     header("Location: ../dashboard.php");die;
 }
 if(isset($_POST["update"])){
-    $id = $_POST["id"];
     $res=$user->getUserByID($_POST["id"]);
     $updateData=array("name"=>$_POST["name"],"phone"=>$_POST["phone"]);
     if(isset($_POST["old-pass"]) && isset($_POST["new-pass"])){
         $oldPass=$_POST["old-pass"];
         $newPass=$_POST["new-pass"];
         
-        if(password_verify($oldPass,$res[0]["password"])){
+        if(verify_password($oldPass,$res[0]["password"])){
             $updateData["password"]=$newPass;
         }
     }
     $user->updateUserByID($updateData,$_POST["id"]);
-    header("Location: ../edit.php?id=$id&msg=user updated");die;
+    header("Location: ../edit.php?msg=user updated");
 }
 
 function userExists($email){

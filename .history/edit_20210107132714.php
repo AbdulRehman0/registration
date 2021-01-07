@@ -17,7 +17,6 @@ if(isset($_GET["id"])){
 }
 
 
-
 include "./templates/header.php";
 ?>
 <body>
@@ -48,7 +47,7 @@ include "./templates/header.php";
                         <div class="row row-space">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Old Password</label>
+                                    <label for="exampleInputPassword1">Password</label>
                                     <input type="password" class="input--style-4" id="exampleInputPassword1" name="old-pass" placeholder="Password" >
                                 </div>
                             </div>
@@ -56,7 +55,7 @@ include "./templates/header.php";
                         <div class="row row-space">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">New Password</label>
+                                    <label for="exampleInputPassword1">Confirm Password</label>
                                     <input type="password" class="input--style-4" id="exampleInputPassword1" name="new-pass" placeholder="Password" >
                                 </div>
                             </div>
@@ -80,8 +79,4 @@ include "./templates/header.php";
 
 <?php
 include "./templates/footer.php";
-if(isset($_GET["msg"])){
-    echo "<script>$(document).ready(function(){alert('".$_GET["msg"]."');window.location.replace('edit.php?id=".$_GET["id"]."');});</script>";
-    // header("Location: edit.php?id=".$_GET["id"]);
-}
 ?>

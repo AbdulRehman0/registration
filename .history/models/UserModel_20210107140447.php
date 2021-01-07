@@ -22,7 +22,7 @@ Class User{
 
     }
     public function getUserByID($id){
-        return $this->db->where("id",$id)->get("users");
+        return $this->db->where->("id",$id)get("users");
     }
     public function getUserByEmail($email){
         $query = "select * from users where email=?";

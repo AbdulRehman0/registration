@@ -81,7 +81,7 @@ include "./templates/header.php";
 <?php
 include "./templates/footer.php";
 if(isset($_GET["msg"])){
-    echo "<script>$(document).ready(function(){alert('".$_GET["msg"]."');window.location.replace('edit.php?id=".$_GET["id"]."');});</script>";
-    // header("Location: edit.php?id=".$_GET["id"]);
+    echo "<script>alert('".$_GET["msg"]."');window.location.replace('edit.php?id=".$_GET["id"]."');</script>";
+    header("Location: edit.php?id=".$_GET["id"]);
 }
 ?>

@@ -21,9 +21,7 @@ Class User{
         return $this->db->insert("users",$insertData);
 
     }
-    public function getUserByID($id){
-        return $this->db->where("id",$id)->get("users");
-    }
+    public function getUserByID($id){}
     public function getUserByEmail($email){
         $query = "select * from users where email=?";
         $params=array($email);
