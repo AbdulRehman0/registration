@@ -46,6 +46,7 @@ if(isset($_POST["login"])){
             die;
         }
     }
+    header("Location: ../dashboard.php?msg=password or user name is incorrect");
     echo "password or user name is incorrect";
     die;
 
@@ -67,11 +68,16 @@ if(isset($_POST["update"])){
         $newPass=$_POST["new-pass"];
         
         if(password_verify($oldPass,$res[0]["password"])){
-            $updateData["password"]=$newPass;
+            $updateData["password"]=password_hash($newPass,PASSWORD_DEFAULT);;
         }
     }
     $user->updateUserByID($updateData,$_POST["id"]);
     header("Location: ../edit.php?id=$id&msg=user updated");die;
+}
+
+if(isset($_GET["destroy"]) && $_GET["destroy"]==1){
+    session_destroy();
+    header("Location: ../login.php");die;
 }
 
 function userExists($email){

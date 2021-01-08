@@ -1,5 +1,8 @@
 <?php
 include "./templates/header.php";
+if($_SESSION["session_id"]==1){
+    header("Location: dashboard.php");die;
+}
 ?>
 <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
